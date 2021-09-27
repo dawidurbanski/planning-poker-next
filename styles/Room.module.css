@@ -1,0 +1,130 @@
+.table {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 14px;
+}
+
+.user__card {
+    width: 105px;
+    height: 160px;
+    font-weight: 900;
+    font-size: 42px;
+    padding-bottom: 15px;
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.user__card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.user__card-front,
+.user__card-back {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+}
+
+.user__card-front {
+    background-color: #eee;
+    color: black;
+}
+
+.user__card-back {
+    background-color: #f6f6f6;
+    transform: rotateY(180deg);
+}
+
+.user__photo {
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
+}
+
+.user__photo img {
+    border-radius: 50%;
+}
+
+.user__photo>div:first-child {
+    display: block !important;
+}
+
+.user__meta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.user__name {
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
+    font-weight: 700;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 90px;
+    margin: 0 8px;
+    border-radius: 8px;
+    font-size: 19px;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+    color: #000;
+    font-weight: 900;
+    border: 1px solid #d8d8d8;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 18%);
+    transition: all .1s linear;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #ebf4ff;
+    margin-top: -.25rem;
+}
